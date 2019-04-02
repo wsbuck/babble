@@ -1,0 +1,242 @@
+:root {
+    --color-one: #6593a4;
+    --color-one-hover: #41768A;
+    --color-two: #265D72;
+    --color-three: #489174;
+    --color-four: rgb(33, 36, 44);
+    --color-bg: rgb(240, 246, 251);
+    --color-card: rgb(250, 252, 253);
+    --color-card-hover: rgb(240, 242, 243);
+
+    --color-hover: white;
+
+    --color-text: #343a40;
+
+}
+
+.App {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;
+  justify-content: center;*/
+  font-size: 20px;
+  color: white;
+}
+
+.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.speech-bubble-received { 
+    position: relative;
+    background: var(--color-one); 
+    border-radius: 6px; 
+    border-bottom-left-radius: 0px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    display: inline-block;
+    float: left;
+    clear: both;
+    box-shadow: 0 3px 4px -1px rgba(10, 10, 10, 0.5);
+    cursor: default;
+    min-width: 150px;
+    max-width: 400px;
+    transition: 0.4s;
+}
+
+.speech-bubble-received:after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: var(--color-one); 
+    border-left: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-left: -20px; 
+    display: none;
+}
+
+.speech-bubble-received:hover {
+    background-color: var(--color-one-hover);
+}
+
+.speech-bubble-received .message-content {
+  color: #dddddd;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+.speech-bubble-received .message-timestamp {
+  color: #dddddd;
+  font-size: 10px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+.speech-bubble-received .avatar-message img {
+    border-radius: 50%;
+    max-width: 40px;
+    width: 100%;
+    max-height: 40px;
+    height: 40px;
+    object-fit: cover;
+    position: absolute;
+    left: -42px;
+    top: 20px;
+}
+
+.speech-bubble-sent { 
+    position: relative;
+    background: var(--color-two);
+    border-radius: 6px; 
+    border-bottom-right-radius: 0px;
+    margin-top: 10px;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    float: right;
+    clear: both;
+    box-shadow: 0 3px 4px -1px rgba(10, 10, 10, 0.5);
+    cursor: default;
+    min-width: 150px;
+    max-width: 400px;
+    transition: 0.4s;
+} 
+
+.speech-bubble-sent:after {
+    content: ''; 
+    position: absolute; 
+    right: 0; 
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-left-color: var(--color-two);
+    border-right: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-right: -20px; 
+    display: none;
+}
+
+.speech-bubble-sent:hover {
+    background-color: #13485C;
+}
+
+.speech-bubble-sent .message-content {
+  color: #dddddd;
+  font-size: 24px;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.speech-bubble-sent .message-timestamp {
+  color: #dddddd;
+  font-size: 10px;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.speech-bubble-sent .avatar-message img {
+    float: right;
+    border-radius: 50%;
+    max-width: 40px;
+    width: 100%;
+    max-height: 40px;
+    height: 40px;
+    object-fit: cover;
+    position: absolute;
+    right: -42px;
+    top: 20px;
+}
+
+#chat-holder {
+    max-width: 500px;
+    display: inline-block;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.chat-input-container {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.chat-input-container .input-group {
+    width: 100% !important;
+}
+
+.card-shadow {
+    background-color: var(--color-card);
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 2px;
+}
+
+.avatar {
+    float: left;
+    border-radius: 50%;
+    max-width: 40px;
+    width: 100%;
+    max-height: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.card-shadow p {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.help-text {
+  color: grey;
+}
+
+.user-item-username {
+  line-height: 40px;
+}
+
+.user-card {
+  cursor: pointer;
+}
+
+.user-card:hover {
+  background-color: var(--color-card-hover);
+}
